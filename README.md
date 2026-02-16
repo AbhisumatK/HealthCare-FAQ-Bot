@@ -1,55 +1,47 @@
-# Medical FAQ System (Token-Efficient Health QA)
+Token-Efficient Medical FAQ System (Prototype)
 
-A medical FAQ system that compresses symptom databases and treatment knowledge to deliver instant, accurate health-related answers while significantly reducing LLM token usage.
+Overview
+- Answers general medical questions (non-diagnostic) using compressed atomic facts.
+- Retrieval → Minimal Context → Answer Generation → Self-Verification → Safe Response.
+- Token-efficient prompts leveraging short, structured facts instead of full documents.
 
-## Overview
+Tech Stack
+- Backend: FastAPI
+- Frontend: Streamlit
+- Vector DB: ChromaDB (local persistence in `data/chroma`)
+- Embeddings: Sentence Transformers by default (`all-MiniLM-L6-v2`).
+- LLM: Pluggable HTTP client. Defaults to local deterministic generator if no API key. Supports ScaleDown API via environment.
 
-This project focuses on solving a core problem in medical AI systems:  
-**high token cost + inconsistent accuracy when querying large medical knowledge bases**.
+Project Structure
+- backend/
+- compression/
+- data/
+- frontend/
 
-The system preprocesses and compresses medical symptom and treatment data into an optimized representation, allowing fast and reliable FAQ-style responses without repeatedly passing large contexts to the model.
+Quick Start
+1) Python 3.10+ recommended.
+2) Install dependencies:
+   pip install -r requirements.txt
+3) Initialize the compressed knowledge base and Chroma index:
+   python compression/preprocess.py
+4) Start backend:
+   uvicorn backend.app:app --reload --port 8000
+5) Start frontend:
+   streamlit run frontend/app.py
 
-## Key Features
+Environment
+- Create folder `.env/` and put a file named `.env` inside with the following keys left empty for now:
 
-- Token-efficient medical question answering
-- Compressed symptom and treatment knowledge base
-- Faster inference with lower API costs
-- Improved answer consistency and reduced hallucination
-- Designed for FAQ-style, non-diagnostic health queries
+  SCALEDOWN_API_URL=
+  SCALEDOWN_API_KEY=
+  EMBEDDING_MODEL=all-MiniLM-L6-v2
+  BACKEND_URL=http://localhost:8000
 
-## How It Works
+Endpoints
+- POST /ask: {"query": "<question>"}
+- POST /verify: {"answer": "...", "facts_used": ["FACT_001", ...]}
+- GET /facts: Returns compressed facts.
 
-1. Medical symptom and treatment data is preprocessed and compressed
-2. Relevant information is retrieved using lightweight matching
-3. Only the minimal required context is sent to the language model
-4. The model generates concise, accurate health answers
-
-## Use Cases
-
-- Medical FAQ chatbots
-- Health information portals
-- Telemedicine support tools (non-diagnostic)
-- Cost-sensitive LLM healthcare applications
-
-## Tech Stack
-
-- Python
-- NLP preprocessing
-- Vector search / compressed representations
-- Large Language Models (LLMs)
-
-## Disclaimer
-
-This system is **not a medical diagnostic tool**.  
-It is intended for informational and educational purposes only and should not replace professional medical advice.
-
-## Future Improvements
-
-- Multi-language medical FAQs
-- Better compression techniques for large datasets
-- Integration with structured medical ontologies
-- Confidence scoring for answers
-
-## License
-
-MIT License
+Notes
+- This system provides informational guidance only. It never diagnoses or prescribes.
+- For red-flag symptoms, it prompts users to seek professional help immediately.

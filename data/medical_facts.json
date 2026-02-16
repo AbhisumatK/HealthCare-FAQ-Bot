@@ -1,0 +1,22 @@
+[
+  {"id":"FACT_001","symptom":"Persistent dry cough","cause":"Upper respiratory tract irritation or post-viral cough","treatment":"Hydration, rest, warm fluids","precaution":"Seek care if lasting more than 2 weeks or with fever"},
+  {"id":"FACT_002","symptom":"Fever (mild)","cause":"Common viral infection","treatment":"Fluids, rest, over-the-counter fever reducers if suitable","precaution":"Consult a professional if fever persists >3 days or >39°C"},
+  {"id":"FACT_003","symptom":"Sore throat","cause":"Viral pharyngitis or irritation","treatment":"Warm salt-water gargle, hydration, rest","precaution":"Seek care if severe pain, difficulty swallowing, or high fever"},
+  {"id":"FACT_004","symptom":"Runny or stuffy nose","cause":"Common cold or allergic rhinitis","treatment":"Hydration, saline nasal rinse, rest","precaution":"Seek care if symptoms last >10 days or severe"},
+  {"id":"FACT_005","symptom":"Mild headache","cause":"Tension or dehydration","treatment":"Hydration, rest, relaxation techniques","precaution":"Seek urgent care for sudden severe headache or neurologic signs"},
+  {"id":"FACT_006","symptom":"Nausea","cause":"Gastrointestinal irritation or motion-related","treatment":"Small frequent sips of clear fluids, rest","precaution":"Seek care if persistent vomiting, dehydration, or blood present"},
+  {"id":"FACT_007","symptom":"Diarrhea (mild)","cause":"Viral gastroenteritis or dietary intolerance","treatment":"Oral rehydration, bland foods","precaution":"Seek care if blood, high fever, or signs of dehydration"},
+  {"id":"FACT_008","symptom":"Mild short-term fatigue","cause":"Inadequate rest or recent illness recovery","treatment":"Balanced nutrition, hydration, paced activity","precaution":"Seek care if prolonged, worsening, or with other concerning symptoms"},
+  {"id":"FACT_009","symptom":"Muscle aches","cause":"Viral illness or overexertion","treatment":"Rest, gentle stretching, hydration","precaution":"Seek care if severe, persistent, or with swelling"},
+  {"id":"FACT_010","symptom":"Seasonal sneezing","cause":"Allergic rhinitis","treatment":"Limit triggers, saline rinse","precaution":"Seek care for breathing difficulty or severe persistent symptoms"},
+  {"id":"FACT_011","symptom":"Mild heartburn","cause":"Gastric acid reflux (non-specific)","treatment":"Smaller meals, avoid late-night eating, limit triggers","precaution":"Seek care if frequent, severe, or with weight loss or bleeding"},
+  {"id":"FACT_012","symptom":"Intermittent back discomfort","cause":"Muscle strain from posture or overuse","treatment":"Activity modification, gentle mobility, heat/cold as tolerated","precaution":"Seek care if numbness, weakness, or bowel/bladder issues"},
+  {"id":"FACT_013","symptom":"Mild dizziness on standing","cause":"Temporary dehydration or posture-related","treatment":"Hydration, rise slowly from sitting","precaution":"Seek care if fainting, chest pain, or persistent dizziness"},
+  {"id":"FACT_014","symptom":"Mild skin dryness","cause":"Low humidity or frequent washing","treatment":"Moisturizer, avoid harsh soaps","precaution":"Seek care if cracked skin, bleeding, or signs of infection"},
+  {"id":"FACT_015","symptom":"Eye strain","cause":"Prolonged screen use","treatment":"Regular breaks, adjust lighting, blink often","precaution":"Seek care if pain, vision changes, or persistent redness"},
+  {"id":"FACT_016","symptom":"Mild insomnia","cause":"Stress or irregular sleep schedule","treatment":"Consistent sleep routine, reduce evening stimulants","precaution":"Seek care if severe daytime impairment or prolonged insomnia"},
+  {"id":"FACT_017","symptom":"Hoarse voice","cause":"Vocal strain or irritation","treatment":"Voice rest, hydration","precaution":"Seek care if hoarseness >2 weeks or breathing difficulty"},
+  {"id":"FACT_018","symptom":"Mild sore muscles after exercise","cause":"Delayed onset muscle soreness","treatment":"Gentle movement, hydration","precaution":"Seek care if severe swelling or dark urine"},
+  {"id":"FACT_019","symptom":"Mild ear discomfort","cause":"Eustachian tube dysfunction or irritation","treatment":"Frequent swallowing, hydration","precaution":"Seek care if fever, severe pain, or hearing loss"},
+  {"id":"FACT_020","symptom":"Mild cough with post-nasal drip","cause":"Upper airway irritation","treatment":"Hydration, saline rinse, rest","precaution":"Seek care if high fever, shortness of breath, or lasting >3 weeks"}
+]
